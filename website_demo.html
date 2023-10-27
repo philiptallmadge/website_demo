@@ -7,9 +7,60 @@
     <meta name="author" content="Philip Tallmadge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Philip Tallmadge Demo Website</title>
+    <style>
+      body {
+        font-family:Georgia, 'Times New Roman', Times, serif
+      }
+      .header {
+        padding: 80px;
+        text-align: center;
+        background: DodgerBlue;
+        color: white;
+      }
+      .header h1 {
+        font-size: 40px;
+      }
+      .center {
+        width:50%;
+        margin: auto;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .parent {
+        
+        top:50%;
+        left:50%;
+        position:relative;
+      }
+      .child {
+        height:50%;
+        width:50%;
+        position:absolute;
+      }
+      .box{
+        width: 40%;
+        height: 200px;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+      }
+
+    </style>  
   </head>
   <body>
-    <h1> Overview</h1>
-    <p> Welcome to my personal website. This website is currently a work in progress as I continue learning html and JavaScript and will serve as a way for me to further practicing them. This site will also contain links to and descriptions of personal coding projects I have worked on, as well as some personal facts.</p>
+    <div class="header">
+      <h1> Overview</h1>
+      <p> Welcome to my personal website. This website is currently a work in progress as I continue learning html and JavaScript and will serve as a way for me to further practicing them. This site will also contain links to and descriptions of personal coding projects I have worked on, as well as some personal facts.</p>
+    </div>
+    <div class="center">
+      <div class="box">
+        <img src = "https://i.redd.it/ry8g7uece8g91.jpg" alt="Example image" style="border-radius:10px; border:5px solid black;" />
+      </div> 
+      <p>Centering A Div</p>
+    </div>
   </body>
-  </html>
+</html>
