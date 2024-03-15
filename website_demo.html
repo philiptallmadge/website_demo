@@ -6,16 +6,19 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Philip Tallmadge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title> Philip Tallmadge Demo Website</title>
     <style>
       body {
         font-family:Georgia, 'Times New Roman', Times, serif
       }
       .header {
-        padding: 80px;
         text-align: center;
-        background: DodgerBlue;
-        color: white;
+        background: rgb(19, 81, 143);
+        color: rgb(255, 255, 255);
+        width: 100%; 
+        height: 10%;
+        padding-bottom: 10px;
       }
       .header h1 {
         font-size: 40px;
@@ -27,26 +30,35 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
       }
-      .parent {
-        
-        top:50%;
-        left:50%;
-        position:relative;
-      }
-      .child {
-        height:50%;
-        width:50%;
-        position:absolute;
+      .center span {
+        flex: 1;
+        flex-direction: row;
       }
       .box{
-        width: 40%;
+        width: 200px;
         height: 200px;
+        margin-left: -3px;
+        margin-right: -3px;
       }
-      img{
-        width: 100%;
-        height: 100%;
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+      }
+      .fa:hover{
+        opacity:0.7;
+      }
+      .fa-linkedin{
+        background: #0077b5;
+        color: white;
+      }
+      .fa-github{
+        background: #333;
+        color: #fafafa;
       }
 
     </style>  
@@ -56,11 +68,19 @@
       <h1> Overview</h1>
       <p> Welcome to my personal website. This website is currently a work in progress as I continue learning html and JavaScript and will serve as a way for me to further practicing them. This site will also contain links to and descriptions of personal coding projects I have worked on, as well as some personal facts.</p>
     </div>
+
     <div class="center">
       <div class="box">
-        <img src = "https://media.licdn.com/dms/image/C5603AQGWygrq_d0Tng/profile-displayphoto-shrink_400_400/0/1662936474698?e=1715817600&v=beta&t=LMN9547BfLhqr-djlUIExKvH338-Ot_Tc2Gn4c7bSV8" alt="Example image" style="border-radius:10px; border:5px solid black;" />
+        <img src = "https://media.licdn.com/dms/image/C5603AQGWygrq_d0Tng/profile-displayphoto-shrink_400_400/0/1662936474698?e=1715817600&v=beta&t=LMN9547BfLhqr-djlUIExKvH338-Ot_Tc2Gn4c7bSV8" alt="Headshot" style="width:200px; height:200px; margin-left: 0px; margin-right: 0px; border: 5px solid black;" />
       </div> 
-      <p>Centering A Div</p>
+    </div>?
+    <div class="center">
+      <p>I'm Phil Tallmadge, a current sophomore at the University of Notre Dame, majoring in Computer Science. Additionally, I am working towards a minor in Engineering Coporate Practice. I prioritize group success over personal achievements. I posses natural leadership skills that will be well served in the Software Industry and I am always open to meeting new people.</p>
+    </div>
+    <div class="center">
+      <a href="https://www.linkedin.com/in/philip-tallmadge-94a024250/"  target="_blank" class="fa fa-linkedin" style="display: inline-block;"> </a>
+      <a href="https://github.com/philiptallmadge"   target="_blank" class="fa fa-github" style="display: inline-block;"> </a>
+
     </div>
   </body>
 </html>
