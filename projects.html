@@ -1,0 +1,68 @@
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal Website">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Philip Tallmadge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+
+  </head>
+<body>
+    <div class="navbar">
+      <ul>
+      <li> <a class="navlinks" rel="noopener noreferrer" href="/index.html" > About Me</a></li>
+      <li> <a class="navlinks" rel="noopener noreferrer" href="projects.html" >Projects</a></li>
+      <li> <a  class="navlinks" href="https://docs.google.com/document/d/1oJfZa7yVfsdEJ8eSt_F8ydUOfoRsn_T50th7oXiBAzc/edit?usp=sharing" target = "_blank" download>Resume</a></li>
+      </ul>
+    </div>
+    <div>
+        <ul class="projects">
+            <li class="project">
+                <h3>Distributed File System</h3>
+                <p style="line-height: 150%;">This project was completed for my distributed systems class and explored the tradeoffs between consistency, availability, and partition tolerance, better known as the CAP theorem.
+                <br />
+                <br />
+                System Architecture 
+                <br />
+                This system had a central "name server" which was responsible for handling all initial user requests. It then had a preallocated number of "storage nodes", which could be changed on server boot. The name server was responsible for maintaining an internal hashing of file names to file ids, which were integers. On file creation/deletion, this name server would make calls to storage nodes to create/delete files in their directories. These files were known only by their file id to the storage nodes, which allowed us to have faster rename times, as only the name server had to update its database. On read/writes, the client first sends a request to the name server with a filename. The server then checks its database to convert the filename to a file id, then from a file id to a storage node address. The name server returns this address to the client. The client then can send requests to the storage node. The client system was written such that clients must connect to the name server first, even if they previously have accessed a given file. This ensures they are reading the most updated information possible, as the file may have been deleted between requests.
+                </p>
+                Further Information
+                <ul>
+                    <li>
+                        This codebase was entirely written in Python and could be made faster by converting to a lower level language, such as C++
+                    </li>
+                    <li>
+                        As a result of using Python, our distributed file system was slower than the traditional Unix file system
+                    </li>
+                    <li>
+                        The name server does not create storage nodes, but instead listens for them on boot to update its address database. This could be improved by having storage nodes send heartbeats to the name server to ensure they are still active.
+                    </li>
+                </ul>
+            </li>
+            <li class="project">
+                 <h3>Voting Data Analysis</h3>
+                <p style="line-height: 150%;">This project was completed for a computing class and looked at voting statistics over the past elections.
+                <br />
+                <br />
+                This project was done in Python with an emphasis on tools such as matplotlib and pandas for creating tables and visualizations.
+                <br /> 
+                <strong>Note:</strong> This project was completed with a partner with the majority of the work done in a google colab notebook and pushed to github later.
+                <br />
+                <a style="color:black" href="https://mikeyags1016.github.io/EG-Comp-Repo/indexWebsite2.html" target="_blank">Link to repo</a>
+                </p>
+                
+            </li>
+            <li class="project">
+                <h3>Venue Booker</h3>
+                <p>This project was a frontend based project built with Javascript to learn the React Framework. 
+
+                <br />
+                <a style="color:black" href="https://github.com/philiptallmadge/modernWebDev" target="_blank">Link to repo</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
